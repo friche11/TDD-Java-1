@@ -18,7 +18,9 @@ public class Relogio {
     }
 
 	public void programarHorario(int horas, int minutos, int segundos) {
-		
+		 this.horas = horas;
+	     this.minutos = minutos;
+	     this.segundos = segundos;
 		
 	}
     
