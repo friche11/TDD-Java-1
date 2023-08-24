@@ -11,12 +11,13 @@ public class Relogio {
     private int segundos;
     private LocalTime tempoInicioCronometro;
     private LocalTime tempoFimCronometro;
+	private boolean formatoAMPM;
 
     public Relogio() {
         this.horas = 0;
         this.minutos = 0;
         this.segundos = 0;
-        
+        this.formatoAMPM = false;
     }
     
     public String getHorario() {
@@ -59,8 +60,8 @@ public class Relogio {
 	        return String.format("%02d:%02d:%02d", horas, minutos, segundos);
 	 }
 
-	public void setFormatoAMPM(boolean b) {
-		
+	public void setFormatoAMPM(boolean formatoAMPM) {
+		 this.formatoAMPM = formatoAMPM;
 		
 	}
     
