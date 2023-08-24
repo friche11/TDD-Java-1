@@ -32,4 +32,12 @@ private Relogio relogio;
         relogio.reiniciarParaMeiaNoite();
         assertEquals("00:00:00", relogio.getHorario());
     }
+	
+	@Test
+	public void testTempoDecorrido() {
+		relogio.marcarInicioCronometro(10, 30, 45);
+		relogio.marcarFimCronometro(11, 46, 15);
+		String tempoDecorrido = relogio.getTempoDecorridoCronometro();
+		assertEquals("01:15:30", tempoDecorrido);
+	}
 }

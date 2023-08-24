@@ -1,10 +1,14 @@
 package com.example;
 
+import java.sql.Date;
+
 public class Relogio {
 
 	private int horas;
     private int minutos;
     private int segundos;
+    private Date tempoInicioCronometro;
+    private Date tempoFimCronometro;
 
     public Relogio() {
         this.horas = 0;
@@ -30,5 +34,18 @@ public class Relogio {
 	    this.segundos = 0;
 		
 	}
+	
+	 public void marcarInicioCronometro(int horas, int minutos, int segundos) {
+		 
+	     
+	    }
+
+	 public void marcarFimCronometro(int horas, int minutos, int segundos) {
+	    
+	    }
+	 
+	 public String getTempoDecorridoCronometro() {
+		 
+	 }
     
 }
