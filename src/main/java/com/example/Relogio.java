@@ -1,14 +1,16 @@
 package com.example;
 
 import java.sql.Date;
+import java.time.Duration;
+import java.time.LocalTime;
 
 public class Relogio {
 
 	private int horas;
     private int minutos;
     private int segundos;
-    private Date tempoInicioCronometro;
-    private Date tempoFimCronometro;
+    private LocalTime tempoInicioCronometro;
+    private LocalTime tempoFimCronometro;
 
     public Relogio() {
         this.horas = 0;
@@ -36,16 +38,25 @@ public class Relogio {
 	}
 	
 	 public void marcarInicioCronometro(int horas, int minutos, int segundos) {
-		 
-	     
+		 tempoInicioCronometro = LocalTime.of(horas, minutos, segundos);
 	    }
 
 	 public void marcarFimCronometro(int horas, int minutos, int segundos) {
-	    
+		 tempoFimCronometro = LocalTime.of(horas, minutos, segundos);
 	    }
 	 
 	 public String getTempoDecorridoCronometro() {
+		 if (tempoInicioCronometro == null || tempoFimCronometro == null) {
+	            return "Tempo não marcado";
+	        }
 		 
+		 	Duration duracao = Duration.between(tempoInicioCronometro, tempoFimCronometro);
+
+	        long horas = duracao.toHours();
+	        long minutos = duracao.toMinutesPart();
+	        long segundos = duracao.toSecondsPart();
+
+	        return String.format("%02d:%02d:%02d", horas, minutos, segundos);
 	 }
     
 }
