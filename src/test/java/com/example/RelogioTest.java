@@ -40,4 +40,17 @@ private Relogio relogio;
 		String tempoDecorrido = relogio.getTempoDecorridoCronometro();
 		assertEquals("01:15:30", tempoDecorrido);
 	}
+	
+	@Test
+    public void testFormato24Horas() {
+        relogio.programarHorario(15, 45, 59);
+        assertEquals("15:45:59", relogio.getHorario());
+    }
+    
+    @Test
+    public void testFormatoAMPM() {
+        relogio.programarHorario(10, 0, 10);
+        relogio.setFormatoAMPM(true);
+        assertEquals("10:00 AM", relogio.getHorario());
+    }
 }
