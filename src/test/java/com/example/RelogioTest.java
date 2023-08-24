@@ -25,4 +25,11 @@ private Relogio relogio;
         relogio.programarHorario(5, 24, 8);
         assertEquals("05:24:08", relogio.getHorario());
     }
+	
+	@Test
+    public void testReiniciarParaMeiaNoite() {
+        relogio.programarHorario(24, 12, 0);
+        relogio.reiniciarParaMeiaNoite();
+        assertEquals("00:00:00", relogio.getHorario());
+    }
 }

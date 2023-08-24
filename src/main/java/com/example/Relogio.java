@@ -23,5 +23,10 @@ public class Relogio {
 	     this.segundos = segundos;
 		
 	}
+
+	public void reiniciarParaMeiaNoite() {
+		
+		
+	}
     
 }
