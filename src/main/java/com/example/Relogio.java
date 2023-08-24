@@ -21,6 +21,28 @@ public class Relogio {
     }
     
     public String getHorario() {
+    	
+    	String ampm;
+    	int hora12;
+    	
+    if(formatoAMPM) {
+    	if (horas >= 12) {
+    	    ampm = "PM";
+    	    if (horas > 12) {
+    	        hora12 = horas - 12;
+    	    } else {
+    	        hora12 = 12;
+    	    }
+    	} else {
+    	    ampm = "AM";
+    	    if (horas == 0) {
+    	        hora12 = 12;
+    	    } else {
+    	        hora12 = horas;
+    	    }
+    	}
+    	return String.format("%02d:%02d:%02d %s", hora12, minutos, segundos, ampm);
+    }
     	 return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
 
@@ -65,4 +87,5 @@ public class Relogio {
 		
 	}
     
+	
 }

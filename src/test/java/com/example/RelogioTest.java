@@ -49,8 +49,8 @@ private Relogio relogio;
     
     @Test
     public void testFormatoAMPM() {
-        relogio.programarHorario(10, 0, 10);
+        relogio.programarHorario(20, 0, 10);
         relogio.setFormatoAMPM(true);
-        assertEquals("10:00 AM", relogio.getHorario());
+        assertEquals("08:00:10 PM", relogio.getHorario());
     }
 }
