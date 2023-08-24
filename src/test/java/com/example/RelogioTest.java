@@ -20,4 +20,9 @@ private Relogio relogio;
 		assertEquals("00:00:00", relogio.getHorario());
 	}
 
+	@Test
+    public void testProgramarHorario() {
+        relogio.programarHorario(5, 24, 8);
+        assertEquals("05:24:08", relogio.getHorario());
+    }
 }

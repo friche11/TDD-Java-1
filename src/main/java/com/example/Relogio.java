@@ -16,5 +16,10 @@ public class Relogio {
     public String getHorario() {
     	 return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
+
+	public void programarHorario(int horas, int minutos, int segundos) {
+		
+		
+	}
     
 }
