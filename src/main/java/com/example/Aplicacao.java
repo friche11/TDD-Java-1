@@ -67,7 +67,8 @@ public class Aplicacao {
                 	System.out.println("Horário agora é " +relogio.getHorario());
                 	break;
                 case 6:
-                	
+                	relogio.setFormatoAMPM(false);
+                	System.out.println("Horário agora é " +relogio.getHorario());
                 	break;
                 case 7:
                 	relogio.atualizarHorario();
