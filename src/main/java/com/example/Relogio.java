@@ -86,6 +86,17 @@ public class Relogio {
 		 this.formatoAMPM = formatoAMPM;
 		
 	}
+	
+	private void atualizarHorario() {
+        // Obtenha a hora atual do sistema
+        java.util.Date agora = new java.util.Date();
+        
+        // Atualiza as horas, minutos e segundos do relógio com a hora do sistema
+        this.horas = agora.getHours();
+        this.minutos = agora.getMinutes();
+        this.segundos = agora.getSeconds();
+        
+    }
     
 	
 }
