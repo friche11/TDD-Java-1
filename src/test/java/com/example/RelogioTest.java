@@ -53,4 +53,23 @@ private Relogio relogio;
         relogio.setFormatoAMPM(true);
         assertEquals("08:00:10 PM", relogio.getHorario());
     }
+    
+    @Test
+    public void testAtualizarHorario() {
+    	 java.util.Date agora = new java.util.Date();
+    	 int horas = agora.getHours();
+         int minutos = agora.getMinutes();
+         int segundos = agora.getSeconds();
+         
+         // Obtenha a representação esperada da hora atual em formato de String
+         String horaAtualEsperada = String.format("%02d:%02d:%02d", horas, minutos, segundos);
+
+         // Obtenha o horário atual do relógio como uma String
+         relogio.programarHorario(horas,minutos,segundos);
+         String horarioAtual = relogio.getHorario();
+
+         // Verifique se o horário atual do relógio é igual ao esperado
+         assertEquals(horaAtualEsperada, horarioAtual);
+    }
+    
 }
