@@ -87,7 +87,7 @@ public class Relogio {
 		
 	}
 	
-	private void atualizarHorario() {
+	public void atualizarHorario() {
         // Obtenha a hora atual do sistema
         java.util.Date agora = new java.util.Date();
         
