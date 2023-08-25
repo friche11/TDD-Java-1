@@ -56,7 +56,8 @@ public class Aplicacao {
                     int segundos3 = scanner.nextInt();
                     relogio.marcarFimCronometro(horas3, minutos3, segundos3);
                 	System.out.println("Tempo decorrido entre os horários é:");
-                	relogio.getTempoDecorridoCronometro();
+                	String tempoDecorrido = relogio.getTempoDecorridoCronometro();
+                    System.out.println(tempoDecorrido); 
                     break;
                 case 4:
                     String horarioAtual = relogio.getHorario();
